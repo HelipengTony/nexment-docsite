@@ -1,0 +1,37 @@
+# Part II - Nexment-React
+Add Nexment to your project
+dependencies using Yarn:
+```shell
+yarn add nexment
+```
+or using NPM:
+```shell
+npm install nexment
+```
+
+Use Nexment in your project:
+
+Import nexment library:
+```js
+import { NexmentContainer } from "nexment"
+```
+Setup nexment configuration:
+```js
+const config = {
+  pageKey: 'xxx' | undefined;
+  enableLinkInput: true | undefined,
+  leancloud: {
+    appId: 'xxx',
+    appKey: 'xxx',
+    serverURL: 'https://xxx.xxx',
+  },
+  admin: {
+    name: 'xxx',
+    email: 'xxx@xxx.xxx',
+  },
+};
+```
+Use the nexment component:
+```jsx
+<NexmentContainer config={config} />
+```

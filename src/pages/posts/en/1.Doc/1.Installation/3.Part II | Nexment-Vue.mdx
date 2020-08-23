@@ -1,0 +1,39 @@
+# Part II - Nexment-Vue
+Add Nexment to your project
+dependencies using Yarn:
+```shell
+yarn add nexment-vue
+```
+or using NPM:
+```shell
+npm install nexment-vue
+```
+
+Use Nexment in your project:
+
+Import nexment library and stylesheet:
+```js
+import NexmentContainer from "nexment-vue";
+import "nexment-vue/dist/nexment-vue.css";
+Vue.use(NexmentContainer);
+```
+Setup nexment configuration:
+```js
+const config = {
+  pageKey: 'xxx' | undefined;
+  enableLinkInput: true | undefined,
+  leancloud: {
+    appId: 'xxx',
+    appKey: 'xxx',
+    serverURL: 'https://xxx.xxx',
+  },
+  admin: {
+    name: 'xxx',
+    email: 'xxx@xxx.xxx',
+  },
+};
+```
+Use the nexment component:
+```Vue
+<NexmentContainer :config="config" />
+```

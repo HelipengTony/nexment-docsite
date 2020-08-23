@@ -1,0 +1,40 @@
+# 在浏览器中使用 Nexment
+通过 Web Component 在现代浏览器中使用 Nexment (基于 Nexment-Vue 开发)
+
+<br/>
+
+### 引入样式 CSS
+在页面头部 `<head/>` 中通过 CDN 添加样式表：
+```html
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nexment-vue/dist/nexment-vue.css">
+```
+
+<br/>
+
+### 引入功能 JS
+在页面底部 `<body/>` 内通过 CDN 添加主体文件：
+```html
+<script src="https://cdn.jsdelivr.net/npm/nexment-vue/dist-wc/nexment-vue.min.js"></script>
+```
+
+<br/>
+
+### 使用 Nexment 组件
+在页面内调用 Nexment 组件，传入配置信息。配置项与 React.js / Vue.js 匹配。
+```html
+<nexment-container
+  email="xxx"
+  name="xxx"
+  serverurl="xxx"
+  appkey="xxx"
+  appid="xxx"
+  pagekey="xxx"
+  enablelinkinput="xxx"
+  enableReplyListModal="xxx"
+></nexment-container>
+```
+
+<br/>
+
+### 使用样例
+[https://github.com/HelipengTony/nexment-vue/blob/master/index.html](https://github.com/HelipengTony/nexment-vue/blob/master/index.html)

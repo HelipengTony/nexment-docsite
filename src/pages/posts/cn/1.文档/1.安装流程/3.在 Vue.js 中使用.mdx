@@ -1,0 +1,58 @@
+# 使用 Nexment-Vue
+通过 Yarn 添加 Nexment 至你的项目依赖里：
+```shell
+yarn add nexment-vue
+```
+也可以通过 NPM 来实现：
+```shell
+npm install nexment-vue
+```
+
+<br/>
+
+### 在你的项目里使用 Nexment:
+
+引入 Nexment 库和样式表：
+```js
+import NexmentContainer from "nexment-vue";
+import "nexment-vue/dist/nexment-vue.css";
+Vue.use(NexmentContainer);
+```
+
+配置 Nexment 配置文件，标 * 则为必填：
++ **pageKey\***: 当前页面唯一标识(留空则自动获取)
++ **enableLinkInput**: 是否开启站点链接输入框
++ **enableReplyListModal**: 是否以弹窗展示 2+ 级评论
++ **leancloud**
+  - **appId\***: LeanCloud 应用 appId
+  - **appKey\***: LeanCloud 应用 appKey
+  - **serverURL\***: LeanCloud 应用域名
++ **admin**
+  - **name\***: 管理员昵称
+  - **email\***: 管理员邮箱
+
+管理员密码将在首次以管理员身份发布评论时进行设置
+
+```js
+const config = {
+  pageKey: 'xxx' | undefined;
+  enableLinkInput: true | false | undefined,
+  enableReplyListModal: true | false | undefined,
+  leancloud: {
+    appId: 'xxx',
+    appKey: 'xxx',
+    serverURL: 'https://xxx.xxx',
+  },
+  admin: {
+    name: 'xxx',
+    email: 'xxx@xxx.xxx',
+  },
+};
+```
+
+<br/>
+
+### 使用 Nexment 组件
+```Vue
+<NexmentContainer :config="config" />
+```
