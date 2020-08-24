@@ -33,7 +33,7 @@ function Header({ i18n }) {
           router.push("/");
         }}
       >
-        <Book />
+        <img src="https://i.loli.net/2020/08/24/OStHigLsG2yojb8.png" />
         <span>{odoc.siteName}</span>
       </div>
       <Tabs

@@ -9,7 +9,7 @@ module.exports = {
     siteKeywords: "docs,documentation,leancloud,nexment,comments",
     i18nEnable: "true",
     i18nConfig: {
-        "default": "English",
+        "default": "Chinese",
         "English": "/posts/en",
         "Chinese": "/posts/cn"
     },
